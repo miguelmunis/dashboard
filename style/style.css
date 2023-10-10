@@ -14,6 +14,7 @@
     box-sizing: 0;
     font-family: 'Poppins', sans-serif;
     background-color: var();
+    box-sizing: border-box;
 }
 
 a{
