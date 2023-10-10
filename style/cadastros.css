@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --cor-verde: #007366;
+    --cor-verdeClaro: #19A797;
+    --cor-branca: #ffffff;
+    --cor-background: #f2f2f2;
+    --cor-preta: #151515;
+
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--cor-background);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 1.4rem;
+}
+
+form{
+  font-size: .8rem;
+  width: 100%;
+  margin: auto;
+}
+
+#submit{
+  width: 102%;
+}
+
+
+@media(min-width: 380px){
+    .container{
+      max-width: 4500px;
+    }
+
+    h1{
+      font-size: 1.6rem;
+    }
+
+    #submit{
+      font-size: 1rem;
+    }
+  }
+
+  
+@media(min-width: 576px){
+  .container{
+    max-width: 590px;
+  }
+}
+
+@media(min-width: 768px){
+  .container{
+    max-width: 720px
+  }
+}
+
+header{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h1{
+  font-weight: 400;
+  color: var(--cor-verde);
+}
+
+#description{
+  font-weight: 200;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+}
+
+#survey-form{
+    position: relative;
+
+    padding: 2rem 0.5rem;
+    border-radius: 0.3rem;
+ }
+ 
+ .form-input{
+    margin: 0 2.5rem 1.2rem 2rem;
+    color: var(--cor-preta);
+ }
+ 
+ .form-input-size{
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.1rem;
+    outline: 0;
+    border-style: none;
+    margin-top: 0.4rem;  
+ }
+
+ #survey-form{
+    background: var(--cor-branca);
+    padding: 2.3rem 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.25);
+ }
+ 
+ .form-input{
+    margin: 0 2.5rem 1.2rem 2rem;
+ }
+ 
+ .form-input-size, textarea{
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.5rem 0.4rem;
+    border-radius: 0.1rem;
+    outline: 0;
+    border: 1px solid #959595;
+    margin-top: 0.4rem;  
+ }
+
+ #dropdown{
+  height: 2.5rem;
+  border: 1px solid #959595;
+  width: 102%;
+ }
+
+
+ textarea{
+    width: 100%;
+    min-height: 6rem;
+    resize: vertical;
+    padding: 0.5rem 0 0 0.5rem;
+   }
+   
+   #submit{
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(90deg, #007366 0%, #19A797 100%);
+    color: white;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    border: none;
+}
+
+
+/*sidebar*/
+
+.sidebar {
+  position: fixed ;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--cor-verde);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.menu{
+  list-style: none;
+  margin: 40% auto;
+  padding: 0;   
+}
+
+
+.menu a {
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--cor-branca);
+}
+
+.menu a:hover, .menu a:hover {
+  background-color: var(--cor-branca);
+  color: var(--cor-verde);
+}
+
+.menu a:hover i, .menu a:hover #referPage{
+  color: var(--cor-verde);
+  cursor: pointer;
+}
+
+i, #referPage{
+  color: var(--cor-branca);
+  margin-right: 20px;
+}
+
+
+#seta{
+  position: absolute;
+  left: 80%;
+}
+
+i{
+  font-size: 24px;
+}
+
+
+
+/*CONFIGURAÇÃO MENU MOBILE*/
+
+.buttonMobile, .menuMobile{
+  position: relative;
+  z-index: 1000;
+  background-color: #f2f2f2;
+  color: var(--cor-verde);
+}
+
+#menuMobile{
+  color: var(--cor-verde);
+}
+
+#menuIcon{
+  color: var(--cor-branca);
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.menuMobile{
+  display: none;
+}
+
+.menuMobile-active{
+  position: absolute;
+  width: 70vw;
+  height: 100vh;
+  background-color: var(--cor-verde);
+  color: var(--cor-branc);
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.itens{
+  margin: 0 auto;
+  width: 90%;
+}
+
+span{
+  display: flex;
+  align-items: center;
+}
+
+
+.menuMobile-active button{
+  padding: .8rem;
+  border-radius: .2rem;
+  width: 100%;
+}
+
+.menuMobile-active button:hover{
+  background-color: var(--cor-branca);
+  color: var(--cor-verde);
+}
+
+.menuMobile-active button:hover i, .menuMobile-active button:hover #referPage{
+  color: var(--cor-verde);
+}
+
+.menuMobile-active button{
+  background: transparent;
+  border: 0;
+}
+
+.mobileText{
+  font-size: 1rem;
+}
+
+.closeButton span i{
+  font-size: 24px;
+  top: 0;
+}
+
+
+
+@media  (max-width: 3000px){
+  .sidebar{
+      width: 15%;
+  }
+
+  .main{
+      width: 80%;    
+  }
+
+  .buttonMobile, .menuMobile{
+      display: none;
+  }
+
+
+}
+
+@media  (max-width: 1280px){
+  .sidebar{
+    width: 3%;
+  }
+  .sidebar span, .sidebar #seta{
+    display: none;
+  }
+
+
+
+}
+
+@media  (max-width: 1024px){
+
+  
+  .sidebar{
+      width: 3%;
+  }
+
+  .sidebar span, .sidebar #seta{
+    display: none;
+  }
+
+  .buttonMobile, .menuMobile{
+      display: none;
+  }
+
+}
+
+@media  (max-width: 768px){
+  .sidebar{
+     display: none;
+  }
+
+.sidebar{
+    display: none;
+}
+
+.buttonMobile{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-verde);
+    color: var(--cor-branca);
+    padding: 12px 6px;
+}
+
+}
+
+
+@media  (max-width: 567px){
+  .sidebar{
+      display: none;
+  }
+  
+  .buttonMobile{
+      position: absolute;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      background-color: var(--cor-verde);
+      color: var(--cor-branca);
+      padding: 12px 6px;
+  }
+
+}
+
+@media  (max-width: 380px){
+
+.main{
+  margin: 20% auto;
+  width: 80%;   
+  left: 0; 
+}
+
+.sidebar{
+  display: none;
+}
+
+.buttonMobile{
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-verde);
+  color: var(--cor-branca);
+  padding: 12px 6px;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1263px){
+  .main{
+      width: 80%;
+  }
+
+}

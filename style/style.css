@@ -1,0 +1,334 @@
+:root{
+    --cor-verde: #007366;
+    --cor-verdeClaro: #19A797;
+    --cor-branca: #ffffff;
+    --cor-background: #f2f2f2;
+    --cor-preta: #151515;
+    --cor-apoio: #474c55;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var();
+}
+
+a{
+    color: var(--cor-apoio);
+    text-decoration: none;
+}
+
+.btn{
+    background: linear-gradient(92deg, #007366 -1.23%, #19A797 108.65%);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: .3rem;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover{
+    cursor: pointer;
+    scale: 0.99;
+}
+
+.main{
+    position: relative;
+    width: 90%;
+    margin: 10% auto;
+    left: 10%;
+}
+
+.atalhos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.btn{
+    width: 40%;    
+    padding: 2rem;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/*sidebar*/
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--cor-verde);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 999;
+    min-height: 100vw;
+}
+
+.menu{
+    list-style: none;
+    margin: 40% auto;
+    padding: 0;   
+}
+
+
+.menu a {
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--cor-branca);
+}
+
+.menu a:hover, .menu a:hover {
+    background-color: var(--cor-branca);
+    color: var(--cor-verde);
+}
+
+.menu a:hover i, .menu a:hover #referPage{
+    color: var(--cor-verde);
+    cursor: pointer;
+}
+
+i, #referPage{
+    color: var(--cor-branca);
+    margin-right: 20px;
+}
+
+
+#seta{
+    position: absolute;
+    left: 80%;
+}
+
+i{
+    font-size: 24px;
+}
+
+
+
+/*CONFIGURAÇÃO MENU MOBILE*/
+
+.buttonMobile, .menuMobile{
+    position: relative;
+    z-index: 1000;
+    background-color: #f2f2f2;
+    color: var(--cor-verde);
+}
+
+#menuMobile{
+    color: var(--cor-verde);
+}
+
+#menuIcon{
+    color: var(--cor-branca);
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.menuMobile{
+    display: none;
+}
+ 
+.menuMobile-active{
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: var(--cor-verde);
+    color: var(--cor-branc);
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+.itens{
+    margin: 0 auto;
+    width: 90%;
+}
+
+span{
+    display: flex;
+    align-items: center;
+}
+
+
+.menuMobile-active button{
+    padding: .8rem;
+    border-radius: .2rem;
+    width: 100%;
+}
+
+.menuMobile-active button:hover{
+    background-color: var(--cor-branca);
+    color: var(--cor-verde);
+}
+
+.menuMobile-active button:hover i, .menuMobile-active button:hover #referPage{
+    color: var(--cor-verde);
+}
+
+.menuMobile-active button{
+    background: transparent;
+    border: 0;
+}
+
+.mobileText{
+    font-size: 1rem;
+}
+
+.closeButton #refMobile i{
+    font-size: 24px;
+    top: 0;
+}
+
+
+
+@media  (max-width: 3000px){
+    .btn{
+        width: 48%;
+        margin: 10px auto;
+        padding: 3rem;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .sidebar{
+        width: 15%;
+    }
+
+    .main{
+        width: 80%;    
+    }
+
+    .buttonMobile, .menuMobile{
+        display: none;
+    }
+}
+
+@media  (max-width: 1024px){
+    .btn{
+        width: 100%;
+        margin: 10px auto;
+        padding: 2.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .sidebar{
+        width: 20%;
+    }
+
+    .main{
+        width: calc(100% - 500px );   
+    }
+
+    .buttonMobile, .menuMobile{
+        display: none;
+    }
+}
+
+@media  (max-width: 768px){
+    .btn{
+        width: 100%;
+        margin: 10px auto;
+        padding: 2.3rem;
+        font-size: 1rem;
+    }
+    .main{
+        margin: 20% auto;
+        width: 80%;   
+        left: 0; 
+    }
+
+    .sidebar{
+        display: none;
+    }
+    
+    .buttonMobile{
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        display: flex;
+        align-items: center;
+        background-color: var(--cor-verde);
+        color: var(--cor-branca);
+        padding: 12px 6px;
+    }
+}
+
+
+@media  (max-width: 567px){
+    .btn{
+        width: 90%;
+        margin: 10px auto;
+        padding: 2.3rem;
+        font-size: 1rem;
+    }
+
+    .main{
+        margin: 20% auto;
+        width: 80%;   
+        left: 0; 
+    }
+
+    .sidebar{
+        display: none;
+    }
+    
+    .buttonMobile{
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        display: flex;
+        align-items: center;
+        background-color: var(--cor-verde);
+        color: var(--cor-branca);
+        padding: 12px 6px;
+    }
+
+}
+
+@media  (max-width: 380px){
+  .btn{
+      width: 100%;
+      margin: 10px auto;
+      font-size: .8rem;
+}
+
+  .main{
+    margin: 20% auto;
+    width: 80%;   
+    left: 0; 
+}
+
+.sidebar{
+    display: none;
+}
+
+.buttonMobile{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-verde);
+    color: var(--cor-branca);
+    padding: 12px 6px;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1263px){
+    .container{
+        width: 80%;
+    }
+
+}

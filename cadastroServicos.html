@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/cadastros.css">
+    <script src="https://kit.fontawesome.com/8f682f19ac.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Cadastro de Serviços</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 id='title'>Cadastro de serviço</h1>
+        </header>
+ 
+        <form id='survey-form'>
+            <div class='form-input'>
+                <label id='name-label'>Cliente</label>
+                <input type='text' id='nomeCliente' placeholder='Digite o nome do cliente' class='form-input-size' required />
+            </div>
+
+                <div class='form-input' style="display: block;">
+                    <label id='service-label'>Serviço</label>
+                    <input type='text' id='servico' placeholder='Digite o serviço' class='form-input-size' required />
+                </div> 
+
+                <div class='form-input' style="display: block;">
+                    <label id='dataServico'>Data do serviço</label>
+                    <input type='date' id='dataServico' class='form-input-size' required />
+                </div> 
+            
+            <div class='form-input'>
+                <label id='valor-label'>Valor</label>
+                <input type="text" id='valor' class='form-input-size' placeholder='Digite o valor do serviço' />
+            </div>
+            
+            <div class='form-input'>
+                <p>Opção de pagamento</p>
+                <select id='dropdown' class='form-input-size' required>
+                    <option disabled selected value>Selecione</option>
+                    <option value='Solteiro'>Pix</option>
+                    <option value='Casado'>Cartão</option>
+                    <option value='Separado'>Dinheiro</option>
+                </select>
+            </div>
+
+            <div class='form-input'>
+                <label id='Endereço'>Descrição do serviço</label>
+                <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Digite a descrição do serviço"> </textarea>
+            </div>  
+
+            <div class='form-input'>
+                <button type='submit' id='submit'>Cadastrar</button>
+            </div>
+        </form>
+        <div class="sidebar">
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-grid-alt"></i>
+                        <span>Dashboard</span>   
+                        <i class='bx bx-chevron-right' id="seta"></i> 
+                    </a>     
+                </li>
+
+                <li>
+                    <a href="cadastro.html">
+                        <i class="bx bx-user"></i>
+                        <span>Clientes</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>             
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastroServicos.html">
+                        <i class='bx bx-wrench' ></i>
+                        <span>Serviços</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>                     
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+           <!--MOBILE MENU-->
+
+    <div class="buttonMobile"  onclick="toggleMenu()">
+        <i class='bx bx-menu' id="menuIcon"></i>
+        <span style="margin: 0%;">Menu</span>
+    </div>
+
+    <nav class="menuMobile" id="menuMobile">
+        <div class="itens">
+            <button class="closeButton" onclick="toggleMenu()">
+                <span>
+                    <i class='bx bx-x' id="navMobile"></i>
+                </span>
+            </button>
+    
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-grid-alt"></i>
+                        <span>Dashboard</span>   
+                        <i class='bx bx-chevron-right' id="seta"></i> 
+                    </a>     
+                </li>
+
+                <li>
+                    <a href="cadastro.html">
+                        <i class="bx bx-user"></i>
+                        <span>Clientes</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>             
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastroServicos.html">
+                        <i class='bx bx-wrench' ></i>
+                        <span>Serviços</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>                     
+                    </a>
+                </li>
+                
+            </ul> 
+        </div>
+    </nav>
+
+
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>

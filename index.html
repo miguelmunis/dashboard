@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <script src="https://kit.fontawesome.com/8f682f19ac.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+        <div class="sidebar">
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-grid-alt"></i>
+                        <span>Dashboard</span>   
+                        <i class='bx bx-chevron-right' id="seta"></i> 
+                    </a>     
+                </li>
+
+                <li>
+                    <a href="cadastro.html">
+                        <i class="bx bx-user"></i>
+                        <span>Clientes</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>             
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastroServicos.html">
+                        <i class='bx bx-wrench' ></i>
+                        <span>Serviços</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>                     
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="atalhos">
+                <main>
+                    <a href="cadastro.html"><button class="btn">Cadastro de clientes</button></a>
+                    <a href=""><button class="btn">Lista de clientes</button></a>
+                    <a href="cadastroServicos.html"><button class="btn">Cadastro de serviços</button></a>
+                    <a href=""><button class="btn">Lista de serviços</button></a>
+                </main>
+            </div>
+        </div>
+
+           <!--MOBILE MENU-->
+
+    <div class="buttonMobile"  onclick="toggleMenu()">
+        <i class='bx bx-menu' id="menuIcon"></i>
+        <span style="margin: 0%;">Menu</span>
+    </div>
+
+    <nav class="menuMobile" id="menuMobile">
+        <div class="itens">
+            <button class="closeButton" onclick="toggleMenu()">
+                <span>
+                    <i class='bx bx-x' id="navMobile"></i>
+                </span>
+            </button>
+    
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-grid-alt"></i>
+                        <span>Dashboard</span>   
+                        <i class='bx bx-chevron-right' id="seta"></i> 
+                    </a>     
+                </li>
+
+                <li>
+                    <a href="cadastro.html">
+                        <i class="bx bx-user"></i>
+                        <span>Clientes</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>             
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastroServicos.html">
+                        <i class='bx bx-wrench' ></i>
+                        <span>Serviços</span>
+                        <i class='bx bx-chevron-right' id="seta"></i>                     
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
