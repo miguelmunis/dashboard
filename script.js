@@ -1,9 +1,9 @@
 function toggleMenu(){
-    const menuMobile = document.getElementById("menuMobile")
+  const menuMobile = document.getElementById("menu-mobile")
 
-    if(menuMobile.className === "menuMobile-active"){
-        menuMobile.className = "menuMobile"
-    }else{
-        menuMobile.className = "menuMobile-active"    
-    }   
+  if(menuMobile.className === "menu-mobile-active"){
+      menuMobile.className = "menu-mobile"
+  }else{
+      menuMobile.className = "menu-mobile-active"    
+  }   
 }

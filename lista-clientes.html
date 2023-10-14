@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/listas.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -85,20 +85,55 @@
             </div>
         </nav>
 
-            <!--Seções dop sistema-->
+            <!--Lista-->
             <main>
-                <div class="atalhos">
-                    <div class="space">
-                            <a href="cadastro-cliente.html"><button class="btn">Cadastro de clientes</button></a>
-                            <a href="lista-clientes.html"><button class="btn">Lista de clientes</button></a>
-                            <a href="cadastro-servicos.html"><button class="btn">Cadastro de serviços</button></a>
-                            <a href=""><button class="btn">Lista de serviços</button></a>   
+
+                <header>
+                    <h1 id='title'>Lista de clientes</h1>
+                </header>
+
+                <div class="lista-clientes">
+
+                    <div class="card-cliente">
+                        <div class="id-cliente">
+                            <span>1</span>
+                        </div> 
+
+                        <div class="nome-cliente">
+                            <span>Miguel Melo Munis</span>
+                        </div>
+
+                        <div class="servico-cliente">
+                            <span>Massagem</span>
+                        </div>
+
+                        <i class='bx bx-edit-alt' id="editar"></i>
+                        <i class='bx bx-trash' id="excluir"></i>
+
                     </div>
+
+                    <div class="card-cliente">
+                        <div class="id-cliente">
+                            <span>2</span>
+                        </div> 
+
+                        <div class="nome-cliente">
+                            <span>Juliano da Silveira</span>
+                        </div>
+
+                        <div class="servico-cliente">
+                            <span>Correria nas costas</span>
+                        </div>
+
+                        <i class='bx bx-edit-alt' id="editar"></i>
+                        <i class='bx bx-trash' id="excluir"></i>
+
+                    </div>
+                
                 </div>
+
+        
             </main>
-
-
-
     </div>   
 
     <!--Script-->

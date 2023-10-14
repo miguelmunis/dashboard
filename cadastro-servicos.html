@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cadastros.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -85,16 +85,53 @@
             </div>
         </nav>
 
-            <!--Seções dop sistema-->
+            <!--Formulário-->
             <main>
-                <div class="atalhos">
-                    <div class="space">
-                            <a href="cadastro-cliente.html"><button class="btn">Cadastro de clientes</button></a>
-                            <a href="lista-clientes.html"><button class="btn">Lista de clientes</button></a>
-                            <a href="cadastro-servicos.html"><button class="btn">Cadastro de serviços</button></a>
-                            <a href=""><button class="btn">Lista de serviços</button></a>   
+
+                <header>
+                    <h1 id='title'>Cadastro de serviço</h1>
+                </header>
+
+                <form action="" id="cadastro-de-servicos">
+                    <div class="form-input">
+                        <label id="cliente-label">Nome do cliente</label>
+                        <input type="text" id="nome-cliente" placeholder="Digite o nome do cliente" class='form-input-size' required />
                     </div>
-                </div>
+
+                    <div class="form-input">
+                        <label id="servico-label">Serviço</label>
+                        <input type="text" id="nome-servico" placeholder="Digite o serviço" class='form-input-size' required />
+                    </div>
+
+                    <div class='form-input'>
+                        <label id='data-servico'>Data do serviço</label>
+                        <input type='date' id='data-servico' class='form-input-size' required />
+                    </div> 
+
+                    <div class="form-input">
+                        <label id="valor-label">Valor</label>
+                        <input type="text" id="valor-servico" placeholder="Digite o valor do serviço" class='form-input-size' required />
+                    </div>
+
+                    <div class='form-input'>
+                        <p>Opção de pagamento</p>
+                        <select id='dropdown' class='form-input-size' required>
+                            <option disabled selected value>Selecione</option>
+                            <option value='Pix'>Pix</option>
+                            <option value='Cartao'>Cartão</option>
+                            <option value='Dinheiro'>Dinheiro</option>
+                        </select>
+                    </div>
+
+                    <div class='form-input'>
+                        <label id='descricao-servico'>Descrição do serviço</label>
+                        <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Digite a descrição do serviço"> </textarea>
+                    </div>  
+
+                    <div class='form-input'>
+                        <button type='submit' id='submit'>Cadastrar serviço</button>
+                    </div>
+                </form>      
             </main>
 
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root{
     --cor-verde: #007366;
     --cor-verdeClaro: #19A797;
@@ -13,100 +15,9 @@
     padding: 0;
     box-sizing: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var();
     box-sizing: border-box;
     font: 16px;
-}
-
-a{
-    color: var(--cor-apoio);
-    text-decoration: none;
-}
-
-.btn{
-    background: linear-gradient(92deg, #007366 -1.23%, #19A797 108.65%);
-    color: var(--cor-branca);
-    border: none;
-    border-radius: .3rem;
-    transition: .3s ease-in-out;
-}
-
-.btn:hover{
-    cursor: pointer;
-    scale: 0.99;
-}
-
-.main{
-    position: relative;
-    width: 90%;
-    margin: 10% auto;
-    left: 10%;
-}
-
-.atalhos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center
-}
-
-.btn{
-    width: 40%;    
-    padding: 2rem;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-/*sidebar*/
-
-.sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: var(--cor-verde);
-    padding: 20px;
-    overflow-y: auto;
-    z-index: 999;
-    min-height: 100vw;
-}
-
-.menu{
-    list-style: none;
-    margin: 40% auto;
-    padding: 0; 
-    min-width: 100vw;  
-}
-
-
-.menu a {
-    justify-content: start;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--cor-branca);
-}
-
-.menu a:hover, .menu a:hover {
-    background-color: var(--cor-branca);
-    color: var(--cor-verde);
-}
-
-.menu a:hover i, .menu a:hover #referPage{
-    color: var(--cor-verde);
-    cursor: pointer;
-}
-
-i, #referPage{
-    color: var(--cor-branca);
-    margin-right: 20px;
-}
-
-
-#seta{
-    position: absolute;
-    left: 80%;
+    font-weight: 400;
 }
 
 i{
@@ -114,34 +25,80 @@ i{
 }
 
 
+/*configuração Sidebar*/
 
-/*CONFIGURAÇÃO MENU MOBILE*/
+.sidebar{
+    position: fixed ;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 100vw;
+    background-color: var(--cor-verde);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 999;
+    width: 20%;
+}
 
-.buttonMobile, .menuMobile{
+.menu{
+    list-style: none;
+    margin: 40% auto;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--cor-branca);
+    gap: 20px;
+}
+
+.menu a:hover{
+    background-color: var(--cor-branca);
+    color: var(--cor-verde);
+}
+
+#seta{
+    position: absolute;
+    left: 80%;
+}
+
+
+/*Sidebar Mobile*/
+
+.button-mobile, .menu-mobile{
     position: relative;
     z-index: 1000;
-    background-color: #f2f2f2;
+    background-color: var(--cor-verde);
+    color: var(--cor-branca);
+    padding: 12px 6px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+
+#menu-mobile{
     color: var(--cor-verde);
 }
 
-#menuMobile{
-    color: var(--cor-verde);
-}
-
-#menuIcon{
+#menu-icon{
     color: var(--cor-branca);
     margin-left: 20px;
     font-size: 24px;
 }
 
-.menuMobile{
+.menu-mobile{
     display: none;
 }
  
-.menuMobile-active{
+.menu-mobile-active{
     position: absolute;
     width: 70vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--cor-verde);
     color: var(--cor-branc);
     top: 0;
@@ -164,174 +121,139 @@ span{
 }
 
 
-.menuMobile-active button{
+.menu-mobile-active button{
     padding: .8rem;
     border-radius: .2rem;
     width: 100%;
 }
 
-.menuMobile-active button:hover{
+.menu-mobile-active button:hover{
     background-color: var(--cor-branca);
     color: var(--cor-verde);
 }
 
-.menuMobile-active button:hover i, .menuMobile-active button:hover #referPage{
+.menu-mobile-active button:hover i, .menu-mobile-active button:hover #referPage{
     color: var(--cor-verde);
 }
 
-.menuMobile-active button{
+.menu-mobile-active button{
     background: transparent;
     border: 0;
 }
 
-.mobileText{
+.mobile-text{
     font-size: 1rem;
 }
 
-.closeButton #refMobile i{
+.close-button #ref-mobile i{
     font-size: 24px;
     top: 0;
 }
 
 
+/*Responsive Sidebar*/
 
-@media  (max-width: 3000px){
-    .btn{
-        width: 48%;
-        margin: 10px auto;
-        padding: 3rem;
-        font-size: 1.5rem;
-        margin-right: 1rem;
-    }
-
+@media (min-width: 0px) and (max-width: 768px){
     .sidebar{
-        width: 15%;
+        display: none;
     }
+}
 
-    .main{
-        width: 80%;    
-    }
-
-    .buttonMobile, .menuMobile{
+@media (min-width: 769px){
+    .menu-mobile, .button-mobile{
         display: none;
     }
 }
 
-@media  (max-width: 1024px){
-    .btn{
-        width: 100%;
-        margin: 10px auto;
-        padding: 2.5rem;
-        font-size: 1.2rem;
-    }
-    
-    .sidebar{
-        width: 20%;
-    }
 
-    .main{
-        width: calc(100% - 500px );   
-    }
+/*Conteúdo principal*/
 
-    .buttonMobile, .menuMobile{
-        display: none;
-    }
+main{
+    position: relative;
+    background-color: var(--cor-background);
+    width: 80%;
+    left: 20%;
+    min-height: 100vw;
 }
 
-@media  (max-width: 768px){
-    .btn{
-        width: 100%;
-        margin: 10px auto;
-        padding: 2.3rem;
-        font-size: 1rem;
-    }
-    .main{
-        margin: 20% auto;
-        width: 80%;   
-        left: 0; 
-    }
-
-    .sidebar{
-        display: none;
-    }
-    
-    .buttonMobile{
-        position: absolute;
-        width: 100vw;
-        top: 0;
-        display: flex;
-        align-items: center;
-        background-color: var(--cor-verde);
-        color: var(--cor-branca);
-        padding: 12px 6px;
-    }
-}
-
-
-@media  (max-width: 567px){
-    .btn{
-        width: 90%;
-        margin: 10px auto;
-        padding: 2.3rem;
-        font-size: 1rem;
-    }
-
-    .main{
-        margin: 20% auto;
-        width: 80%;   
-        left: 0; 
-    }
-
-    .sidebar{
-        display: none;
-    }
-    
-    .buttonMobile{
-        position: absolute;
-        width: 100vw;
-        top: 0;
-        display: flex;
-        align-items: center;
-        background-color: var(--cor-verde);
-        color: var(--cor-branca);
-        padding: 12px 6px;
-    }
-
-}
-
-@media  (max-width: 380px){
-  .btn{
-      width: 100%;
-      margin: 10px auto;
-      font-size: .8rem;
-}
-
-  .main{
-    margin: 20% auto;
-    width: 80%;   
-    left: 0; 
-}
-
-.sidebar{
-    display: none;
-}
-
-.buttonMobile{
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    display: flex;
-    align-items: center;
-    background-color: var(--cor-verde);
+.btn{
+    background: linear-gradient(92deg, #007366 -1.23%, #19A797 108.65%);
     color: var(--cor-branca);
-    padding: 12px 6px;
+    border: none;
+    border-radius: .3rem;
+    transition: .3s ease-in-out;
+    width: 45%;    
+    padding: 3rem;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
+.btn:hover{
+    cursor: pointer;
+    scale: 0.99;
 }
 
-@media (min-width: 768px) and (max-width: 1263px){
-    .container{
-        width: 80%;
+.space{
+    position: relative;
+    width: 90%;
+    margin: 10% auto;
+}
+
+.atalhos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+button{
+    margin: auto;
+}
+
+/*Responsive Content*/
+
+@media (min-width: 0px) and (max-width: 768px){
+    main{
+        margin: auto;
+        width: 100%;   
+        left: 0;
+    }
+    
+    .btn{
+        background: linear-gradient(92deg, #007366 -1.23%, #19A797 108.65%);
+        color: var(--cor-branca);
+        border: none;
+        border-radius: .3rem;
+        transition: .3s ease-in-out;
+        width: 80%;    
+        padding: 2rem;
+        margin-top: 10px;
     }
 
+    .space{
+        text-align: center;
+        margin-top: 6rem;
+        min-height: 100vh;
+    }
 }
+
+@media (min-width: 769px){
+    .menu-mobile, .button-mobile{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
