@@ -176,6 +176,10 @@ main{
     min-height: 100vw;
 }
 
+#nav-mobile{
+    color: #ffffff;
+}
+
 header{
     font-size: .8rem;
     color: var(--cor-verde);
@@ -203,24 +207,23 @@ header{
     display: flex;
     width: 20%;
     justify-content: center;
+    margin-right: 40px;
 }
 
-.nome-cliente, .servico-cliente{
+.nome-cliente, .servico-cliente, .celular-cliente{
     display: flex;
     width: 35%;
     justify-content: start;
+    margin-right: 40px;
 }
 
 #editar, #excluir{
     display: flex;
     width: 10%;
     justify-content: end;
+    margin-right: 40px;
+
 }
-
-
-
-
-
 
 
 /*Responsive Content*/
@@ -240,27 +243,35 @@ h1{
     font-size: 1rem;
 }
 
+.card-cliente{
+    margin-top: 10px;
+}
+
 .id-cliente{
     display: flex;
     width: 10%;
     justify-content: center;
 }
 
-.nome-cliente{
+.nome-cliente, .nome-servico{
     display: flex;
     width: 50%;
     justify-content: start;
 }
 
-.servico-cliente{
-    display: none;
-}
 
 #editar, #excluir{
     display: flex;
-    width: 5%;
+    width: 10%;
     justify-content: end;
     font-size: 18px;
+}
+
+.lista-clientes{
+    margin: auto;
+    width: 90%;
+    overflow-x: scroll;
+    background-color: #ffffff;
 }
 
 }

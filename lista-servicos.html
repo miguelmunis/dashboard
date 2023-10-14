@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style/cadastros.css">
+    <link rel="stylesheet" href="style/listas.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -67,7 +67,7 @@
                     </li>
     
                     <li>
-                        <a href="cadastro.html">
+                        <a href="cadastro-cliente.html">
                             <i class="bx bx-user"></i>
                             <span>Clientes</span>
                             <i class='bx bx-chevron-right' id="seta"></i>             
@@ -85,64 +85,63 @@
             </div>
         </nav>
 
-            <!--Formulário-->
+            <!--Lista-->
             <main>
 
                 <header>
-                    <h1 id='title'>Cadastro de cliente</h1>
+                    <h1 id='title'>Lista de clientes</h1>
                 </header>
 
-                <form action="" id="cadastro-de-servicos">
-                    <div class="form-input">
-                        <label id="cliente-label">Nome do cliente</label>
-                        <input type="text" id="nome-cliente" placeholder="Digite o nome do cliente" class='form-input-size' required />
+                <div class="lista-clientes">
+                    <div class="card-cliente">
+                        <div class="id-cliente">
+                            <span>1</span>
+                        </div> 
+
+                        <div class="nome-cliente">
+                            <span>Miguel Melo Munis</span>
+                        </div>
+
+                        <div class="celular-cliente">
+                            <span>37 996659475</span>
+                        </div>
+
+                        <div class="servico-cliente">
+                            <span>Massagem</span>
+                        </div>
+
+                        <i class='bx bx-edit-alt' id="editar"></i>
+                        <i class='bx bx-trash' id="excluir"></i>
+
                     </div>
- 
-                    <div class="form-input">
-                        <label id="servico-label">Celular</label>
-                        <input type="number" id="celular-cliente" placeholder="Digite número do celular" class='form-input-size' required />
+                    
+                    <div class="card-cliente">
+                        <div class="id-cliente">
+                            <span>1</span>
+                        </div> 
+
+                        <div class="nome-cliente">
+                            <span>Miguel Melo Munis</span>
+                        </div>
+
+                        <div class="celular-cliente">
+                            <span>37 996659475</span>
+                        </div>
+
+                        <div class="servico-cliente">
+                            <span>Massagem</span>
+                        </div>
+
+                        <i class='bx bx-edit-alt' id="editar"></i>
+                        <i class='bx bx-trash' id="excluir"></i>
+
                     </div>
 
-                    <div class='form-input'>
-                        <label id='data-nascimento'>Data de nascimento</label>
-                        <input type='date' id='data-servico' class='form-input-size' required />
-                    </div> 
 
-                    <div class="form-input">
-                        <label id="valor-label">Idade</label>
-                        <input type="number" id="idade-cliente" placeholder="Digite a idade do cliente" class='form-input-size' required />
-                    </div>
-
-                    <div class='form-input'>
-                        <p>Estado civil</p>
-                        <select id='dropdown' class='form-input-size' required>
-                            <option disabled selected value>Selecione</option>
-                            <option value='Solteiro'>Solteiro</option>
-                            <option value='Casado'>Casado</option>
-                            <option value='Separado'>Separado</option>
-                            <option value='Divorciado'>Divorciado</option>
-                            <option value='Viuvo'>Viúvo</option>
-                        </select>
-                    </div>
-
-                    <div class='form-input'>
-                        <label id='profissao-cliente'>Profissão</label>
-                        <input type="text" id="profissao-cliente" placeholder="Digite a profissão do cliente" class='form-input-size'/>
-                    </div>  
-
-                    <div class='form-input'>
-                        <label id='profissao-cliente'>Endereço</label>
-                        <input type="text" id="endereco-cliente" placeholder="Digite o endereço do cliente" class='form-input-size'/>
-                    </div>  
-
-                    <div class='form-input'>
-                        <button type='submit' id='submit' onclick="adicionarLinha()">Cadastrar cliente</button>
-                    </div>
-                </form>      
+                
+                </div>
+        
             </main>
-
-
-
     </div>   
 
     <!--Script-->

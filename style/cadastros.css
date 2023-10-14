@@ -177,12 +177,15 @@ main{
     position: absolute;
 }
 
+#nav-mobile{
+    color: #ffffff;
+}
+
 header{
     font-size: .8rem;
     color: var(--cor-verde);
     text-align: center;
     margin: 2rem;
-    font-size: .8rem;
 }
 
 #cadastro-de-servicos{

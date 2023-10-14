@@ -171,9 +171,14 @@ span{
 main{
     position: relative;
     background-color: var(--cor-background);
+
     width: 80%;
     left: 20%;
     min-height: 100vw;
+}
+
+#nav-mobile{
+    color: #ffffff;
 }
 
 .btn{
@@ -226,7 +231,7 @@ button{
         border: none;
         border-radius: .3rem;
         transition: .3s ease-in-out;
-        width: 90%;    
+        width: 80%;    
         padding: 2rem;
         margin-top: 10px;
     }
